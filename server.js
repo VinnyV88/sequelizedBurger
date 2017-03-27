@@ -2,13 +2,8 @@ var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 
-/*
-	did this instead of 
-		var app = express();
-	because now I can include this file and get the app
+var db = require("./models");
 
-	this is useful in the connection.js file
-*/
 var app = module.exports = express(); 
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -37,6 +32,8 @@ var burgersController = require("./controllers/burgers_controller.js");
 
 app.use("/burgers", burgersController);
 
-app.listen(PORT, function(){
+db.sequelize.sync().then( function () {
+	app.listen(PORT, function(){
 	console.log('listening on PORT ' + PORT)
+	});
 });
