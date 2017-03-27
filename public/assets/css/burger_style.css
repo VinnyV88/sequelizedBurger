@@ -1,0 +1,150 @@
+.navbar {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+.logo {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+.byname {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+.logo-lg {
+    margin: -87px 0 0px -160px;
+    /* play with these to position the image */
+    /*position:absolute;*/
+    z-index: 100;
+    width: 110px;
+    /*background-color: #fff;*/
+    padding: 5px;
+}
+
+.logo-sm {
+    margin: -64px 0 0px -160px;
+    /* play with these to position the image */
+    /*position:absolute;*/
+    z-index: 100;
+    width: 90px;
+    /*background-color: #fff;*/
+    padding: 5px;
+}
+
+.navbar-lg {
+    border: none;
+    border-top: 50px solid transparent;
+}
+
+.navbar-sm {
+    border: none;
+    border-top: 23px solid transparent;
+}
+
+.byname-lg {
+    position: relative;
+    top: 0px;
+    left: -45px;
+}
+
+.byname-sm {
+    position: relative;
+    top: 0px;
+    left: -60px;
+}
+
+#burger-logo {
+  width: 500px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 15px;
+}
+
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 150px;
+}
+
+.navbar-inverse {
+    background-image: none;
+    background-color: #eb2a2e;
+    border-color: #f29530;
+}
+
+.dropdown-menu>li>a {
+    color: #f29530;
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+    background-image: none;
+    background-color: #eb2a2e;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #f29530;
+    background-image: linear-gradient(to bottom, #FFF 0, #f3f3f3 100%);
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    text-shadow: none;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #f29530;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    padding-top: 120px;
+    margin-bottom: 60px;
+    background-color: #ffe5c9;
+}
+
+.jumbotron {
+ background-color: rgba(0,0,0,.075);
+}
+
+.burger-list {
+  background-color: rgba(125, 8, 8, 0.28);  
+}
+
+.burger-name {
+    padding-top: 9px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f29530;
+    border-bottom: 20px solid #eb2a2e;
+}
+
+.api {
+  float: left;
+}
+
+.copyright {
+    margin: 10px 0;
+    color: white;
+}

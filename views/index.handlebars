@@ -1,0 +1,49 @@
+<br>
+<div class="row">
+  <div class="col-md-4">
+    <h4>Burger Menu</h4>
+    <hr>
+    <ul class="list-group">
+      {{#each burgers}} {{#unless this.devoured}}
+      <li class="row list-group-item burger-list">
+        <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+          <label class="col-md-8 burger-name" for="devoured">{{this.burger_name}} </label>
+          <div class="col-md-4">
+            <input type="hidden" name="devoured" value="true">
+            <button class="btn btn-warning eat-burger" type="submit">EAT!</button>
+          </div>
+        </form>
+      </li>
+      {{/unless}} {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-4">
+    {{!--new burger submit--}}
+    <h4>Add Burger to Menu</h4>
+    <hr>
+    <form action="/burgers/create" method="POST" role="form" data-toggle="validator">
+      <div class="form-group text-right">
+        <input type="text" class="form-control" id="burger" name="burger" required data-error="Burger name is required.">
+        <div class="help-block with-errors"></div>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-danger">Add Burger</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-4">
+    {{!--devoured burgers--}}
+    <h4>Devoured Burgers</h4>
+    <hr>
+    <ul class="list-group">
+      {{#each burgers}} {{#if this.devoured}}
+      <li class="row list-group-item burger-list">
+        <div class="col-md-12 burger-name text-muted">{{this.burger_name}} </div>
+      </li>
+      {{/if}} {{/each}}
+    </ul>
+
+  </div>
+</div>
