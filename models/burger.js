@@ -9,12 +9,6 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 140]
       }
-    },
-    devoured: {
-      type: DataTypes.BOOLEAN,
-      // defaultValue is a flag that defaults a new burgers devoured value to false if
-      // it isn't supplied one
-      defaultValue: false
     }
   });
   return Burger;

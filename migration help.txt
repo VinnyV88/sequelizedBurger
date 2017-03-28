@@ -1,0 +1,25 @@
+1. I made a migration file 
+
+      sequelize migration:create --name giveAName
+
+2. you would open that file and put in any changes to the database in the up part
+
+      refer to this if need help: http://docs.sequelizejs.com/en/latest/docs/migrations/
+
+3. you would reverse those changes in the down part
+
+      refer to this if need help: http://docs.sequelizejs.com/en/latest/docs/migrations/
+
+4. you would run your migration file
+
+      sequelize db:migrate
+
+5. edit the model file to include the changes you made
+
+6. you would edit the views (handlebars) 
+
+7. you would update the routes in the controllers
+
+8. you would test
+
+9. if you're using nodemon beware of issues
