@@ -9,10 +9,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 140]
       }
     },
-  burger_id: {
-      type: DataTypes.INTEGER,
-	  allowNull: false,
-    },
  burger_qty: {
       type: DataTypes.INTEGER,
 	  allowNull: false,
@@ -20,7 +16,8 @@ module.exports = function(sequelize, DataTypes) {
   devoured: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
-    },
+    }
+  }, {
   freezeTableName: true,
 
     // define the table's name
@@ -28,7 +25,12 @@ module.exports = function(sequelize, DataTypes) {
 
     classMethods: {
       associate: function(models) {
-        Customer_Order.hasMany(models.Burger)
+        Customer_Order.belongsTo(models.Burger, {
+          onDelete: "CASCADE",
+          foreignKey: {
+            allowNull: false
+          }
+        })
       }
     }
   });

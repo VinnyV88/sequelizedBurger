@@ -10,6 +10,15 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 140]
       }
     }
-  });
+  },{
+    classMethods: {
+      associate: function(models) {
+        Burger.hasMany(models.Customer_Order, {
+            onDelete: "cascade"
+          });
+        }
+      }
+    }
+  );
   return Burger;
 };

@@ -118,6 +118,10 @@ body {
     background-color: #ffe5c9;
 }
 
+.burger-order, .devour-burger {
+    line-height: 2;
+}
+
 .jumbotron {
  background-color: rgba(0,0,0,.075);
 }
