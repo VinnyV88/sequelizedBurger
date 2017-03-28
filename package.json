@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "A burger logger with MySQL, Node, Express, Handlebars and Sequelize ORM.",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.",
   "main": "index.js",
   "scripts": {
     "start": "node server"
@@ -23,7 +23,6 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.7",
     "mysql": "^2.13.0",
-    "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0"
+    "sequelize": "^3.30.4"
   }
 }
