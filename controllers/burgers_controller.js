@@ -11,7 +11,8 @@ router.get("/", function (req, res) {
   models.Burger.findAll({})
   .then(function (burgers_data) {
     data.burgers = burgers_data
-    models.Customer_Order.findAll({include:[models.Burger]})
+    // models.Customer_Order.findAll({include:[models.Burger], order:[[models.Burger, 'burger_name', 'DESC']]})
+    models.Customer_Order.findAll({include:[models.Burger], order:[['id', 'ASC']]})
     .then(function (orders_data) {
       data.orders = orders_data
       res.render('index', data)

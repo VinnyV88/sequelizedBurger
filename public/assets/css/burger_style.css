@@ -122,6 +122,11 @@ body {
     line-height: 2;
 }
 
+#devour-error {
+    color: darkred;
+    font-weight: 400;
+    font-size: 16px;
+}
 .jumbotron {
  background-color: rgba(0,0,0,.075);
 }

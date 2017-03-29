@@ -4,21 +4,21 @@
     <h4>Burger Menu</h4>
     <hr>
     <ul class="list-group">
-      {{#each burgers}} 
+      {{#each burgers}}
       <li class="list-group-item burger-list">
         <div class="row devour-burger">
-            <label class="col-md-7 burger-name" for="eat-qty">{{this.burger_name}} </label>
-            <div class="col-md-5">
-              <button class="btn btn-warning eat-burger" type="submit" data-burger-id={{this.id}}>Eat (1) Now!</button>
-            </div>
+          <label class="col-md-7 burger-name" for="eat-qty">{{this.burger_name}} </label>
+          <div class="col-md-5">
+            <button class="btn btn-warning eat-burger" type="submit" data-burger-id={{this.id}}>Eat (1) Now!</button>
+          </div>
         </div>
         <div class="row">
           <div class="col-md-7">
             <label class="burger-order-qty" for="qty">Or Order Here:</label>
           </div>
           <div class="col-md-5 burger-order">
-          <input class="burger-id" type="hidden" name="burger-id"  value={{this.id}}>
-          <input class="col-md-4 form-control burger-qty" type="number" name="qty" placeholder="Quantity?">
+            <input class="burger-id" type="hidden" name="burger-id" value={{this.id}}>
+            <input class="col-md-4 form-control burger-qty" type="number" name="qty" placeholder="Quantity?">
           </div>
         </div>
       </li>
@@ -28,6 +28,7 @@
   <div class="col-md-4">
     <h4>Please Enter Yor Name</h4>
     <hr>
+    <div id="devour-error"></div>
     <form role="form" data-toggle="validator">
       <div class="form-group text-right">
         <input type="text" class="form-control" id="cust-name" name="cust-name" placeholder="Your Name" required data-error="Customer name is required.">
@@ -59,12 +60,26 @@
     <hr>
     <ul class="list-group">
       {{#each orders}} {{#if this.devoured}}
-      <li class="row list-group-item burger-list">
-        <div class="col-md-12 burger-name text-muted">{{this.Burger.burger_name}} (devoured by {{this.cust_name}})  </div>
+      <li class="list-group-item burger-list">
+        <div class="row">
+          <div class="col-md-12 order-number">
+            Order Number: {{this.id}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 burger-name">{{this.Burger.burger_name}} (devoured by {{this.cust_name}}) </div>
+        </div>
       </li>
       {{else}}
-      <li class="row list-group-item burger-list">
-        <div class="col-md-12 burger-name text-muted">{{this.Burger.burger_name}} ({{this.cust_name}} ordered {{this.burger_qty}})  </div>
+      <li class="list-group-item burger-list">
+        <div class="row">
+          <div class="col-md-12 order-number">
+            Order Number: {{this.id}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 burger-name">{{this.Burger.burger_name}} ({{this.cust_name}} ordered {{this.burger_qty}}) </div>
+        </div>
       </li>
       {{/if}} {{/each}}
     </ul>
