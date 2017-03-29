@@ -2,21 +2,21 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "A burger logger with MySQL, Node, Express, Handlebars and Sequelize ORM.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VinnyV88/burger.git"
+    "url": "git+https://github.com/VinnyV88/sequelizedBurger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VinnyV88/burger/issues"
+    "url": "https://github.com/VinnyV88/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/VinnyV88/burger#readme",
+  "homepage": "https://github.com/VinnyV88/sequelizedBurger#readme",
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "^1.16.1",
